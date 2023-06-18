@@ -1,0 +1,39 @@
+Route:
+  point etombohan'ny fahasimbana (omena latitude sy longitude anaty carte)
+  point efaran'ny fahasimbana (omena latitude sy longitude anaty carte)
+  largeur anle lalana
+  degre de profondeur anlay fahasimbana
+Goudron:
+  duree de fabrication par metre cude ana Goudron 
+  prix de fabrication par metre cude ana Goudron
+Base:
+  postgres
+  postgis
+
+echelle: 10 profondeur => 1cm
+
+classes:
+  Point:
+    valeur_kilometre(numer)
+    latitude(string)
+    longitude(string)
+  Route:
+    debut(Point)
+    fin(Point)
+    largeur(numer)
+    degat(number)
+    nom(string)
+  Goudron:
+    prix_metre_3(number)
+    duree_fabrication(number)
+
+fonctions:
+  fonction pour calculer le volume de goudron necessaire pour faire la Route
+  fonction pour calculer le temps de fabrication necessaire
+  fonction pour calculer le prix de goudron a utiliser
+
+zavatra takina:
+  requete mitady anle point(ecole, hopital, ...) manodidina 2km a la ronde(debut, fin) ana route anak 1 de ka ny gravite no ambony ndrindra
+
+affichage:
+  Django
